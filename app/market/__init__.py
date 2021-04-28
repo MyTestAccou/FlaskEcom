@@ -10,5 +10,7 @@ app.config['SECRET_KEY'] = '13bf17468ce7e11670d9d242'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
+login_manager.login_view = "login_page"
+login_manager.login_message_category = "info"
 
 from market import routes
